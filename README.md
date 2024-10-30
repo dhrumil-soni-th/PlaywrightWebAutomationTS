@@ -11,20 +11,20 @@ This project is an automation practice using Playwright for end-to-end testing. 
 ## Project Structure
 
 AUTOMATIONPRACTICEPLAYWRIGHT
-├── node_modules/ # Node.js dependencies
-├── playwright-report/ # Generated reports for test executions
-├── test-results/ # Stores results of test runs
-├── tests/ # Main directory for test-related files
-│ ├── config/ # Configuration files for environment and test settings
-│ ├── data/ # Test data files, such as JSON
-│ ├── pageObjects/ # Page Object Model (POM) classes for application pages
-│ ├── withoutPO/ # Tests without using Page Objects
-│ ├── withPO/ # Tests using Page Objects
-├── utils/ # Utility functions and helper scripts
-├── .gitignore # Git ignore file to exclude certain files/folders from version control
-├── package-lock.json # Lockfile for NPM dependencies
-├── package.json # Project metadata and NPM scripts
-└── playwright.config.ts # Playwright configuration file
+├── node_modules/         # Node.js dependencies
+├── playwright-report/    # Generated reports for test executions
+├── test-results/         # Stores results of test runs
+├── tests/                # Main directory for test-related files
+│   ├── config/           # Configuration files for environment and test settings
+│   ├── data/             # Test data files, such as JSON
+│   ├── pageObjects/      # Page Object Model (POM) classes for application pages
+│   ├── withoutPO/        # Tests without using Page Objects
+│   └── withPO/           # Tests using Page Objects
+├── utils/                # Utility functions and helper scripts
+├── .gitignore            # Git ignore file to exclude certain files/folders from version control
+├── package-lock.json     # Lockfile for NPM dependencies
+├── package.json          # Project metadata and NPM scripts
+└── playwright.config.ts  # Playwright configuration file
 
 ## Prerequisites
 
@@ -35,8 +35,8 @@ AUTOMATIONPRACTICEPLAYWRIGHT
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/your-repo/automation-practice-playwright.git
-    cd automation-practice-playwright
+    git clone https://github.com/dhrumil-soni-th/PlaywrightWebAutomationTS.git
+    cd automationpracticeplaywright
     ```
 
 2. Install the dependencies:
@@ -68,13 +68,17 @@ npx playwright test
 - To run tests with a specific tag or folder, use:
 
 ```bash
+# Run tests with Page Objects
 npx playwright test tests/withPO
 
-Run all tests: npx playwright test ./tests/withPO/*.spec.ts --headed --project=chromium
+# Run all tests in headed mode for Chromium
+npx playwright test ./tests/withPO/*.spec.ts --headed --project=chromium
 
-Debug Mode: npx playwright test ./tests/withPO/*.spec.ts --headed --project=chromium --debug
+# Debug mode
+npx playwright test ./tests/withPO/*.spec.ts --headed --project=chromium --debug
 
-Run specific test: npx playwright test ./tests/withPO/scenario1.spec.ts --headed --project=chromium --grep="Login"
+# Run a specific test
+npx playwright test ./tests/withPO/scenario1.spec.ts --headed --project=chromium
 ```
 
 - Viewing Test Reports
